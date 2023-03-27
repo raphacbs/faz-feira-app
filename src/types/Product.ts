@@ -1,7 +1,10 @@
 export interface Product {
-  id: number;
-  nome: string;
-  descricao: string;
-  preco: number;
-  imagem: string;
+  code: string;
+  description: string;
+  brand: string;
+  thumbnail?: null;
+  createdAt: string;
+  updateAt: string;
+  unit?: null;
+  priceHistories?: null[] | null;
 }

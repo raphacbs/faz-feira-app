@@ -4,7 +4,10 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../HomeScreen';
 import ListsScreen from '../ListsScreen';
 import SettingsScreen from '../SettingsScreen';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/AntDesign';
+import {myTheme} from '../../theme/theme';
+// import {useTheme} from '../../hooks';
+
 const Tab = createBottomTabNavigator();
 
 const MainTabScreen = () => {
@@ -12,7 +15,7 @@ const MainTabScreen = () => {
     <Tab.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
+        tabBarActiveTintColor: myTheme.colors.primary,
       }}>
       <Tab.Screen
         name="Home"
@@ -21,7 +24,7 @@ const MainTabScreen = () => {
           tabBarLabel: 'Home',
           headerShown: false,
           tabBarIcon: ({color, size}) => (
-            <Icon name="home" color={color} size={size} />
+            <Icon name="barcode" color={color} size={size} />
           ),
         }}
       />
@@ -31,7 +34,7 @@ const MainTabScreen = () => {
         options={{
           tabBarLabel: 'Minhas Listas',
           tabBarIcon: ({color, size}) => (
-            <Icon name="list" color={color} size={size} />
+            <Icon name="bars" color={color} size={size} />
           ),
         }}
       />
@@ -41,7 +44,7 @@ const MainTabScreen = () => {
         options={{
           tabBarLabel: 'Configurações',
           tabBarIcon: ({color, size}) => (
-            <Icon name="settings" color={color} size={size} />
+            <Icon name="setting" color={color} size={size} />
           ),
         }}
       />

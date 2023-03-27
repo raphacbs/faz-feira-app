@@ -15,6 +15,9 @@ import {Provider} from 'react-redux';
 import store from './src/redux/store';
 import {QueryClientProvider, QueryClient} from 'react-query';
 
+import ThemeProvider from './src/theme/ThemeProvider';
+import {myTheme} from './src/theme/theme';
+
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   const queryClient = new QueryClient({
@@ -32,13 +35,15 @@ function App(): JSX.Element {
   return (
     <QueryClientProvider client={queryClient}>
       <Provider store={store}>
-        <NavigationContainer>
-          <StatusBar
-            barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-            backgroundColor={backgroundStyle.backgroundColor}
-          />
-          <MainTabScreen />
-        </NavigationContainer>
+        <ThemeProvider theme={myTheme}>
+          <NavigationContainer>
+            <StatusBar
+              barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+              backgroundColor={backgroundStyle.backgroundColor}
+            />
+            <MainTabScreen />
+          </NavigationContainer>
+        </ThemeProvider>
       </Provider>
     </QueryClientProvider>
   );

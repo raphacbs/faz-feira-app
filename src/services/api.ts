@@ -8,4 +8,25 @@ const api = axios.create({
   },
 });
 
+export const searchProducts = async (searchTerm: string) => {
+  const params = {
+    pageNo: 1,
+    pageSize: 10,
+    sortBy: 'description',
+    sortDir: 'asc',
+  };
+  let search = '';
+  if (/^\d+$/.test(searchTerm)) {
+    search = `code=${searchTerm}`;
+  } else {
+    search = `description=${searchTerm}`;
+  }
+  const url = `/api/v1/products?pageNo=${params.pageNo}&pageSize=${params.pageSize}&${search}&sortBy=${params.sortBy}&sortDir=${params.sortDir}`;
+  console.log(url);
+  console.log(params);
+  const response = await api.get(url);
+  console.log(response.data);
+  return response.data;
+};
+
 export default api;
