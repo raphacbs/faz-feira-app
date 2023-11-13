@@ -7,7 +7,7 @@
       "developmentClient": true,
       "distribution": "internal",
       "env": {
-        "API_URL": "diycompany.online:8084"
+        "EXPO_PUBLIC_API_URL": "http:\\diycompany.online:8084"
       },
       "releaseChannel": "dev"
     },
@@ -16,12 +16,12 @@
         "buildType": "apk"
       },
       "env": {
-        "API_URL": "diycompany.online:8084"
+        "EXPO_PUBLIC_API_URL": "http:\\diycompany.online:8084"
       }
     },
     "production": {
       "env": {
-        "API_URL": "diycompany.online:8085"
+        "EXPO_PUBLIC_API_URL": "http:\\diycompany.online:8085"
       },
       "releaseChannel": "stating"
     }
