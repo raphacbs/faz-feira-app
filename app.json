@@ -2,7 +2,7 @@
   "expo": {
     "name": "Faz Feira",
     "slug": "faz-feira",
-    "version": "1.0.9",
+    "version": "1.0.14",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "versionCode": 7,
+      "versionCode": 14,
       "package": "com.raphacbs.fazfeira"
     },
     "web": {
@@ -39,6 +39,9 @@
     "plugins": [
       "expo-localization",
       "expo-router"
-    ]
+    ],
+    "updates": {
+      "url": "https://u.expo.dev/24784022-2fe9-4f30-9f2e-0251b6b16edb"
+    }
   }
 }

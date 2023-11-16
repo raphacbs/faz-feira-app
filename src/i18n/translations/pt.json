@@ -6,7 +6,7 @@
     "user_or_password_error": "Usuário ou senha incorreto",
     "email_already": "Email já cadastrado",
     "alert_title": "Ocorreu um erro",
-    "unknown": "Um erro desconhecido ocorreu"
+    "unknown": "Ops! Um erro desconhecido ocorreu."
   },
   "form_messages": {
     "label_new_user": "Novo usuário?",
@@ -90,7 +90,7 @@
   },
   "sing_in_screen": {
     "welcome": "Bem vindo ao Faz Feira!",
-    "sub_title": "Faça o login para continuar!",
+    "sub_title": "Versão 1.0.14",
     "label_sign_in": "Entrar"
   },
   "sing_up_screen": {

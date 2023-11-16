@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig } from "axios";
 import { getToken } from "./TokenService";
 
 export const api = axios.create({
-  baseURL: process.env.EXPO_PUBLIC_API_URL,
+  baseURL: "http://diycompany.online:8085",
 });
 
 api.interceptors.request.use(async (config: any) => {
